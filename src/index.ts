@@ -3,7 +3,8 @@
  *
  * The fact-check layer for LLM-generated names. Issues signed
  * EVP/1 verdicts across five canonical axes (trademark, domain,
- * cultural, sound, pronunciation).
+ * cultural, sound_symbolism, pronunciation). The 'sound_symbolism'
+ * axis is rendered as 'Sound' on user-facing surfaces.
  *
  * Quick start:
  *
@@ -32,15 +33,15 @@ export interface VerifyOptions {
 
 export interface AxisStatus {
   status: "CLEAR" | "CAUTION" | "BLOCKED" | "INSUFFICIENT_SIGNAL" | "UNKNOWN";
-  score: number;
-  confidence?: number;
+  score: number | null;
+  confidence?: number | null;
 }
 
 export interface VerdictAxes {
   trademark: AxisStatus;
   domain: AxisStatus;
   cultural: AxisStatus;
-  sound: AxisStatus;
+  sound_symbolism: AxisStatus;
   pronunciation: AxisStatus;
 }
 
@@ -48,7 +49,7 @@ export interface Verdict {
   evp_version: string;
   name: string;
   verdict: "PROCEED" | "ITERATE" | "DECIDE" | "ABANDON" | "INSUFFICIENT_SIGNAL";
-  score: number;
+  score: number | null;
   axes: VerdictAxes;
   verdict_id: string;
   issued_at: string;

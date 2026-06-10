@@ -1,6 +1,6 @@
 {
   "name": "@etymolt/sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Official TypeScript / Node SDK for Etymolt — the fact-check layer for LLM-generated names.",
   "license": "Apache-2.0",
   "author": "Etymolt <hello@etymolt.com>",
