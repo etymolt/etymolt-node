@@ -19,8 +19,10 @@ import { Etymolt } from "@etymolt/sdk";
 const etymolt = new Etymolt();
 const verdict = await etymolt.verify("Stratagem");
 
-// verdict.verdict   → "PROCEED" | "ITERATE" | "DECIDE" | "ABANDON" | "INSUFFICIENT_SIGNAL"
-// verdict.score     → number | null (null when INSUFFICIENT_SIGNAL)
+// verdict.verdict   → "PROCEED" | "PROCEED_STRATEGIC" | "ABANDON"
+// verdict.score     → number | null (null when partial)
+// verdict.status    → "complete" | "partial"
+// verdict.reason    → string (e.g. "hard_blocker", "coexistence_required", "no_workaround")
 // verdict.axes      → { trademark, domain, cultural, sound_symbolism, pronunciation }
 // verdict.disclaimer → Render this verbatim per EVP/1 §5.
 

@@ -48,7 +48,9 @@ export interface VerdictAxes {
 export interface Verdict {
   evp_version: string;
   name: string;
-  verdict: "PROCEED" | "ITERATE" | "DECIDE" | "ABANDON" | "INSUFFICIENT_SIGNAL";
+  verdict: "PROCEED" | "PROCEED_STRATEGIC" | "ABANDON";
+  status: "complete" | "partial";
+  reason?: string;
   score: number | null;
   axes: VerdictAxes;
   verdict_id: string;
