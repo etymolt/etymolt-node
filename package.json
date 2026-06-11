@@ -1,7 +1,7 @@
 {
   "name": "@etymolt/sdk",
-  "version": "0.2.0",
-  "description": "Official TypeScript / Node SDK for Etymolt — the fact-check layer for LLM-generated names.",
+  "version": "0.2.1",
+  "description": "Official TypeScript / Node SDK for Etymolt \u2014 the fact-check layer for LLM-generated names.",
   "license": "Apache-2.0",
   "author": "Etymolt <hello@etymolt.com>",
   "homepage": "https://etymolt.com",
@@ -34,7 +34,11 @@
       "require": "./dist/index.js"
     }
   },
-  "files": ["dist", "README.md", "LICENSE"],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "engines": {
     "node": ">=18"
   },

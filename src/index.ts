@@ -114,7 +114,7 @@ export class Etymolt {
    *
    * @example
    *   const verdict = await etymolt.verify("Stratagem");
-   *   console.log(verdict.verdict);  // "ITERATE"
+   *   console.log(verdict.verdict);  // "PROCEED_STRATEGIC"
    *   console.log(verdict.score);    // 60
    *
    * @example
